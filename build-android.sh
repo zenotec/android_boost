@@ -258,9 +258,14 @@ case "$NDK_RN" in
 		TOOLSET=gcc-androidR8e
 		;;
 	"10 (64-bit)"|"10b (64-bit)"|"10c (64-bit)"|"10d (64-bit)")
-		TOOLCHAIN=${TOOLCHAIN:-arm-linux-androideabi-4.6}
+		TOOLCHAIN=${TOOLCHAIN:-arm-linux-androideabi-4.8}
 		CXXPATH=$AndroidNDKRoot/toolchains/${TOOLCHAIN}/prebuilt/${PlatformOS}-x86_64/bin/arm-linux-androideabi-g++
 		TOOLSET=gcc-androidR8e
+		;;
+	"10e-rc4 (64-bit)")
+		TOOLCHAIN=${TOOLCHAIN:-arm-linux-androideabi-4.9}
+		CXXPATH=$AndroidNDKRoot/toolchains/${TOOLCHAIN}/prebuilt/${PlatformOS}-x86_64/bin/arm-linux-androideabi-g++
+		TOOLSET=gcc-androidR8f
 		;;
 	*)
 		echo "Undefined or not supported Android NDK version!"
